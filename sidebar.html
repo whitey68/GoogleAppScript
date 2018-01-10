@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<h1>Index of all sheets in this workbook:</h1>
+<input type="button" value="Close" onclick="google.script.host.close()" />
+ 
+<ol>
+<?!= 
+  getSheetNames().map(function(d) {
+    return "<li><a href='https://docs.google.com/spreadsheets/d/1Hh7sLWwP4jQHQPitgTGY6p9YIQ1PRWLfReDuHXV0x6Q/edit#gid=" + d[1] + "' target='_blank'>" + d[0] + "</a></li>";
+  }).join('');
+?>
+</ol>
